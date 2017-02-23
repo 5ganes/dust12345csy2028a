@@ -1,0 +1,87 @@
+body{
+	font-size: 15px; background: gray;font-family: cursive;margin:0;
+	line-height: 28px;
+}
+h1,h2,h3,h4,h5,h6,p,ul{
+	margin: 0;padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+header{
+	background: blue; text-align: center;padding: 3%;color: white;
+	margin-bottom: 0.5%;
+}
+.menubar{
+	background: blue;padding: 0 1%;margin-bottom: 0.5%;
+}
+.menubar ul{
+	display: flex;flex-flow: row wrap;
+}
+.menubar ul li{
+	margin:1%; padding: 1%; background: lightblue;flex-grow: 1;
+	text-align: center;
+}
+.menubar ul li:hover{
+	background: white; border-radius:20px;
+}
+.menubar ul li:hover a{
+	color:red;
+}
+.menubar ul li a{color:black;}
+
+.menubar ul li ul{
+	display: none;position: absolute; width: 24%;
+}
+.menubar ul li:hover ul{
+	display: block; margin: 1% 0 0 0;background: blue
+}
+
+section{
+	background: white;padding: 1%;display: flex;flex-flow: row nowrap;
+	justify-content: space-around;
+}
+section article{
+	background:  lightblue;width: 30%;padding: 1%;
+}
+section article h3{
+	background: blue;color: white;padding: 2% 3%; text-align: center;
+}
+section article p{
+	margin-top: 1%;text-align: justify;
+}
+section article.article-image p{
+	text-align: center;
+}
+section article.article-image p img{
+	width: 60%;margin-top:2%;
+}
+
+footer{
+	background: blue;padding: 1%;display: flex;flex-direction:row;
+	justify-content: space-between;
+
+}
+footer article{
+	background: lightblue;width: 30%;padding: 1%;
+}
+
+@media all and (max-width: 600px){
+	.menubar ul, section, footer{
+		flex-direction: column;
+	}
+	section article{
+		width: 98%;
+	}
+	footer article{
+		width: 98%;
+		border-bottom: 4px solid red;
+	}
+	footer article:last-child{
+		border:none;
+	}
+}
